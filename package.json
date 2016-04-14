@@ -1,7 +1,7 @@
 {
   "name": "decamelize-keys-deep",
   "version": "0.0.2",
-  "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
+  "description": "Deeply convert the camelized keys of an object into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
