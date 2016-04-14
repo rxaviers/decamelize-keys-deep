@@ -6,7 +6,7 @@ module.exports = function(obj, options) {
     if (typeof value === "object" && !Array.isArray(value)) {
       value = mapObj(value, function(_key, _value) {
         var newKey = decamelize(_key, options);
-        if (newKey in value) {
+        if (_key !== newKey && newKey in value) {
           throw new Error("Decamelized key `" + newKey + "` would overwrite existing key of the given JSON object");
         }
         return [newKey, _value];

@@ -13,7 +13,12 @@ describe("decamelizeKeysDeep", function() {
     var json = {unicornRainbow: {fooBar: 1, foo_bar: 2}};
     expect(function() {
       decamelizeKeysDeep(json);
-    }).to.throw;
+    }).to.throw();
+
+    json = {foo: 1}
+    expect(function() {
+      decamelizeKeysDeep(json);
+    }).to.not.throw();
   });
 
 });
