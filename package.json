@@ -1,10 +1,10 @@
 {
-  "name": "camelcase-keys-deep",
+  "name": "decamelize-keys-deep",
   "version": "0.0.1",
   "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": "rxaviers/decamelize-keys-deep",
   "keywords": [
@@ -39,5 +39,9 @@
   "dependencies": {
     "decamelize": "^1.2.0",
     "map-obj": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   }
 }
