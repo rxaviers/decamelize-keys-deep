@@ -13,7 +13,7 @@ module.exports = function decamelizeKeysDeep(obj, options) {
   // Array, whose typeof is `object` too.
   if (Array.isArray(obj)) {
     return obj.map(function(element) {
-      return decamelizeKeysDeep(element);
+      return decamelizeKeysDeep(element, options);
     });
   }
   // So, if this is still an `object`, we might be interested in it.
@@ -23,7 +23,7 @@ module.exports = function decamelizeKeysDeep(obj, options) {
       if (key !== newKey && newKey in obj) {
         throw new Error("Decamelized key `" + newKey + "` would overwrite existing key of the given JSON object");
       }
-      return [newKey, decamelizeKeysDeep(value)];
+      return [newKey, decamelizeKeysDeep(value, options)];
     });
   }
   // Something else like a String or Number.
